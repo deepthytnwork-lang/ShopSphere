@@ -16,12 +16,22 @@ namespace ShopSphere.Domain
         private Product() { }
         public Product(string name, decimal price, int stock,String? description=null)
         {
-            if(string.IsNullOrWhiteSpace(name)) throw new ArgumentException("Name is required.");
-            if (price <= 0) throw new ArgumentException("Price must be positive");
-            if (stock <= 0) throw new ArgumentException("Stock cannot be negetive ");
+            Validate(name, price, stock, description);
             Name = name;Price = price;Stock=stock;Description = description;
                     
                     }
+        public void update(string name, decimal price, int stock, String? description = null)
+        {
+            Validate(name, price, stock, description);
+            Name = name;Price = price;Stock=stock;Description = description;
+        }
+           private static void Validate(string name, decimal price, int stock, String? description = null)
+        {
+            if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException("Name is required.");
+            if (price <= 0) throw new ArgumentException("Price must be positive");
+            if (stock <= 0) throw new ArgumentException("Stock cannot be negetive ");
+        }
+       
 
-    }
+        }
 }

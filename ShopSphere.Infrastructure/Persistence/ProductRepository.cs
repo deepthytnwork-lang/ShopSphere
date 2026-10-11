@@ -16,7 +16,10 @@ namespace ShopSphere.Infrastructure.Persistence
         public Task<Product?> GetbyIdAsync(int id, CancellationToken ct = default) => _db.Products.FirstOrDefaultAsync(p => p.Id == id, ct);
         public async Task AddAsync(Product product, CancellationToken ct = default) => await _db.Products.AddAsync(product, ct);
         public Task SaveChangesAsync(CancellationToken ct=default) => _db.SaveChangesAsync(ct);
+        public void Remove(Product product) => _db.Products.Remove(product);
 
-        
+        public async Task< IEnumerable<Product>> GetTopTenAsyc()=>await _db.Products.AsNoTracking().Include(o=>o.Stock).Where(o=>o.Price>0).ToListAsync();
+        //include() for egar loading,AsNotracking for readonly queries will improve performance and solve n+1 problem
+
     }
 }

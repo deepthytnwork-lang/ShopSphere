@@ -12,5 +12,6 @@ namespace ShopSphere.Application.Abstractions
         Task<Product?> GetbyIdAsync(int id,CancellationToken ct=default);
         Task AddAsync(Product product, CancellationToken ct = default);
         Task SaveChangesAsync(CancellationToken ct = default);
+        void Remove(Product product);
     }
 }
