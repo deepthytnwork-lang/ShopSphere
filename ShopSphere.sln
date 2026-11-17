@@ -13,13 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopSphere.Infrastructure",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopSphere.Tests", "ShopSphere.Tests\ShopSphere.Tests.csproj", "{B3675CBF-C7BA-4911-BD02-B5313849620D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopSphere.Admin", "ShopSphere.Admin\ShopSphere.Admin.csproj", "{1D3451B8-C8C4-4731-9F50-C86D0A619AE6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{118E0D36-33EF-40AB-A6F2-6DE210E1EFA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -42,5 +41,15 @@ Global
 		{B3675CBF-C7BA-4911-BD02-B5313849620D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3675CBF-C7BA-4911-BD02-B5313849620D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3675CBF-C7BA-4911-BD02-B5313849620D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D3451B8-C8C4-4731-9F50-C86D0A619AE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D3451B8-C8C4-4731-9F50-C86D0A619AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D3451B8-C8C4-4731-9F50-C86D0A619AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D3451B8-C8C4-4731-9F50-C86D0A619AE6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF228F50-52E3-4AB0-8B64-C0E1B57FB2FA}
 	EndGlobalSection
 EndGlobal
