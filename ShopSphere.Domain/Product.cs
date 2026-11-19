@@ -30,6 +30,7 @@ namespace ShopSphere.Domain
             if (string.IsNullOrWhiteSpace(name)) throw new ArgumentException("Name is required.");
             if (price <= 0) throw new ArgumentException("Price must be positive");
             if (stock <= 0) throw new ArgumentException("Stock cannot be negetive ");
+            if (name.Length > 200) throw new DomainException("Name cannot exceed 200 characters");
         }
        
 

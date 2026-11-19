@@ -30,7 +30,7 @@ namespace ShopSphere.Application.Products
             await _repo.SaveChangesAsync(ct);
             return ToDto(product);
         }
-        public async Task<bool> UpdateAsync(int id,ProductRequest r,CancellationToken ct)
+        public async Task<bool> UpdateAsync(int id,ProductRequest r,CancellationToken ct = default)
         {
             var product = await _repo.GetbyIdAsync(id, ct);
             if(product is null) return false;
@@ -43,6 +43,7 @@ namespace ShopSphere.Application.Products
             var product=await _repo.GetbyIdAsync(id,ct);
             if(product is null) return false;
             _repo.Remove(product);
+            await _repo.SaveChangesAsync(ct);
             return true;
         }
         private static ProductDto ToDto(Product p) => new(p.Id, p.Name, p.Description, p.Price, p.Stock);
